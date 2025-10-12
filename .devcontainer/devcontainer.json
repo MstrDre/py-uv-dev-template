@@ -1,0 +1,26 @@
+{
+  "name": "py-uv-dev",
+  "build": { "dockerfile": "Dockerfile" },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "charliermarsh.ruff",
+        "ms-azuretools.vscode-docker",
+        "eamodio.gitlens",
+        "yzhang.markdown-all-in-one"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": ".venv/bin/python",
+        "python.terminal.activateEnvironment": true,
+        "editor.formatOnSave": true,
+        "ruff.lint.enable": true,
+        "editor.codeActionsOnSave": { "source.fixAll.ruff": true }
+      }
+    }
+  },
+  "remoteUser": "vscode",
+  "postCreateCommand": ".devcontainer/post-create.sh"
+}
