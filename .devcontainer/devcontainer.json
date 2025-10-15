@@ -1,6 +1,8 @@
 {
   "name": "py-uv-dev",
-  "build": { "dockerfile": "Dockerfile" },
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -17,7 +19,12 @@
         "python.terminal.activateEnvironment": true,
         "editor.formatOnSave": true,
         "ruff.lint.enable": true,
-        "editor.codeActionsOnSave": { "source.fixAll.ruff": true }
+        "editor.codeActionsOnSave": {
+          "source.fixAll.ruff": true
+        },
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter"
+        }
       }
     }
   },
