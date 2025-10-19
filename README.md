@@ -4,6 +4,7 @@ It lets you create consistent, portable dev environments across machines — fas
 
 ## 1. Prerequisites
 1. Docker Desktop (running)
+
 2. Visual Studio Code with extensions:
  - Dev Containers (ms-vscode-remote.remote-containers)
  - Docker (ms-azuretools.vscode-docker)
@@ -11,6 +12,7 @@ It lets you create consistent, portable dev environments across machines — fas
  - Pylance (ms-python.vscode-pylance)
  - Ruff (charliermarsh.ruff)
  - Black Formatter (ms-python.black-formatter)
+
 3. Git and GitHub CLI (gh)
  - You must be logged into GitHub CLI
 
@@ -21,16 +23,17 @@ It lets you create consistent, portable dev environments across machines — fas
   **Choose one:**
 
   - A) GitHub CLI (recommended)
-  `gh repo clone <your-username>/py-uv-dev-template`
-  `cd py-uv-dev-template`
+    - `gh repo clone <your-username>/py-uv-dev-template`
+    - `cd py-uv-dev-template`
 
   - B) Git over HTTPS
-  `git clone https://github.com/<your-username>/py-uv-dev-template.git`
-  `cd py-uv-dev-template`
+    - `git clone https://github.com/<your-username>/py-uv-dev-template.git`
+    - `cd py-uv-dev-template`
 
   - C) Download ZIP
-  *GitHub → Code → Download ZIP*
-  *Unzip → open folder in VS Code*
+    - *GitHub → Code → Download ZIP*
+    - *Unzip → open folder in VS Code*
+
   **If you want to use new.sh, A or B is better.**
 
 ### 2.2. Verify template files
@@ -68,8 +71,8 @@ Use new.sh to create a new GitHub repo from this template, clone it locally, and
 - Visibility defaults to private if omitted
 
 **Examples:**
-`./new.sh my-service`
-`./new.sh my-public-service public`
+- `./new.sh my-service`
+- `./new.sh my-public-service public`
 
 **What the script does (step-by-step)**
 - Checks your setup
@@ -89,6 +92,7 @@ Inside your new project:
 
 1. Reopen in container
 *VS Code → Command Palette → Dev Containers: Reopen in Container*
+
 This builds the Docker image and starts a container using .devcontainer/.
 
 2. Post-create steps run automatically
@@ -97,9 +101,9 @@ This builds the Docker image and starts a container using .devcontainer/.
 - Create a .venv in your project
 - Install ruff and black
 
-If it didn’t run: Dev Containers: Rebuild and Reopen in Container
-Ensure the virtual environment exists (idempotent)
-`uv venv`
+If it didn’t run:
+- Dev Containers: Rebuild and Reopen in Container
+- Ensure the virtual environment exists (idempotent) `uv venv`
 
 ### 2.5. First run (hello world)
 
@@ -146,7 +150,7 @@ Hello from Dev Container template!
 
 - gh not logged in
   `gh auth login`
-  
+
 - new.sh permission denied
   `chmod +x new.sh`
 
